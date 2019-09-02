@@ -1,7 +1,7 @@
 {
-  "name": "lesson2",
+  "name": "lesson3",
   "version": "1.0.0",
-  "description": "Homework for lesson2",
+  "description": "Homework for lesson3",
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
@@ -23,8 +23,10 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "style-loader": "^1.0.0",
     "webpack": "^4.39.3"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Menu from "./Menu";
+import './app/styles/style.css';
 
 class App extends React.Component {
     render() {
