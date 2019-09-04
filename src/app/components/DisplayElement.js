@@ -20,7 +20,7 @@ export default class DisplayElement extends React.Component {
         }
 
         return <div>
-            <h2 className={'link'} onClick={() => {
+            <h2 className='link' onClick={() => {
                 this.setState({display: !this.state.display});
             }}>Скрыть/показать блок</h2>
             {newsBlock}
