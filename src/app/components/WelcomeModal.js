@@ -25,7 +25,7 @@ class WelcomeModal extends Component {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <p>Modal body text goes here.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur deserunt minus numquam! Accusamus aliquid nam quasi qui voluptatem voluptatibus?</p>
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -36,7 +36,7 @@ class WelcomeModal extends Component {
     }
 
     componentDidMount() {
-
+        this.setState({modal: true});
     }
 }
 
