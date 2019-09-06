@@ -51,14 +51,14 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            modal: false
+            welcomeModal: false
         };
     }
 
     render() {
         return(
             <>
-                <WelcomeModal show = {this.state.modal}/>
+                <WelcomeModal show = {this.state.welcomeModal}/>
                 <Blog posts = {posts} />
             </>
         );

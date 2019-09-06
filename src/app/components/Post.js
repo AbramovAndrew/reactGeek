@@ -4,7 +4,6 @@ import '../styles/Post.css';
 
 class Post extends Component {
     render() {
-
         const date = new Date(Date.parse(this.props.post.createDate)).toDateString();
         const post = (
             <div className={'post'}>
