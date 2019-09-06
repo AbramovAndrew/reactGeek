@@ -2,7 +2,7 @@
   "name": "lesson4",
   "version": "1.0.0",
   "description": "Homework for lesson4",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "dev": "webpack",
     "watch": "webpack --mode development --watch",
