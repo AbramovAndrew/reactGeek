@@ -48,11 +48,18 @@ const posts = [
 ];
 
 class App extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            modal: true
+        };
+    }
+
     render() {
         return(
             <>
-                {<Blog posts = {posts} />}
-                {<WelcomeModal />}
+                <WelcomeModal show = {this.state.modal}/>
+                <Blog posts = {posts} />
             </>
         );
     }
