@@ -2,11 +2,12 @@
   "name": "lesson4",
   "version": "1.0.0",
   "description": "Homework for lesson4",
-  "main": "App.js",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack",
     "watch": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,11 @@
     "bootstrap": "^4.3.1",
     "css-loader": "^3.2.0",
     "react": "^16.9.0",
-    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
+    "react-router": "^3.2.4",
     "style-loader": "^1.0.0",
-    "webpack": "^4.39.3"
+    "webpack": "^4.39.3",
+    "webpack-dev-server": "^3.8.0"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.7"
