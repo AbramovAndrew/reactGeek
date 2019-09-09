@@ -1,0 +1,37 @@
+{
+  "name": "lesson4",
+  "version": "1.0.0",
+  "description": "Homework for lesson4",
+  "main": "App.js",
+  "scripts": {
+    "dev": "webpack",
+    "watch": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbramovAndrew/reactGeek.git"
+  },
+  "author": "AbramovAndrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbramovAndrew/reactGeek/issues"
+  },
+  "homepage": "https://github.com/AbramovAndrew/reactGeek#readme",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.2.0",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-dom": "^16.9.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.7"
+  }
+}
