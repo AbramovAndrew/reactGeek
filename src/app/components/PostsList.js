@@ -15,27 +15,8 @@ class PostsList extends Component {
         if (!this.state.posts.length) {
             return null;
         }
-
-        let authors = [];
-        axios.get('http://jsonplaceholder.typicode.com/users')
-            .then(response => {
-                // console.log(response.data);
-                response.data.forEach((user) => {
-                    // authors[parseInt(user.id)] = user.username;
-                    authors.push(user.username);
-                });
-                // authors = response.data.map((user) => {
-                //     // authors[parseInt(user.id)] = user.username;
-                //     return user.username;
-                // });
-            });
-        // console.log(authors);
-        // console.log(authors.length);
-        // console.log(authors[2]);
-        // console.log(userId);
-
         const posts = this.state.posts.map((post) => {
-            return <Post key={post.id} authors={authors} {...post} />;
+            return <Post key={post.id} {...post} />;
         });
         return (
             <div>
@@ -46,10 +27,27 @@ class PostsList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://jsonplaceholder.typicode.com/posts')
-            .then(response => {
-                this.setState({posts: response.data})
-            });
+        const self = this;
+        function getUsers() {
+            return axios.get('http://jsonplaceholder.typicode.com/users');
+        }
+
+        function getPosts() {
+            return axios.get('http://jsonplaceholder.typicode.com/posts');
+        }
+
+        axios.all([getUsers(), getPosts()])
+            .then(axios.spread(function (usersPromise, postsPromise) {
+                const authors = usersPromise.data;
+
+                const posts = postsPromise.data;
+
+                posts.forEach((post) => {
+                    post.author = authors[post.userId - 1].username;
+                });
+
+                self.setState({posts: posts})
+            }));
     }
 }
 
